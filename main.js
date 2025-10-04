@@ -6,6 +6,8 @@
 // newVal = Number(score);
 // console.log(typeof(newVal));
 
+
+
 // *********** stack & heap ***********/
 
 // stack - memory allocation for primitive data types(like number, string, boolean, null, undefined, symbol)
@@ -18,7 +20,7 @@
 
 // let userTwo = userOne;
 
-// userTwo.name = 'Nafiz Shorker';
+// userTwo.name = 'Nafiz Sarker';
 // userTwo.age = 12;
 
 // console.log(userOne.name);
@@ -26,6 +28,7 @@
 
 
 //********** string in js ************/
+
 // const name = 'Naeem';
 // const age = 22;
 
@@ -34,16 +37,19 @@
 // console.log(name[4]);
 // console.log(name.indexOf(('a')));
 
+
 //******** normal prac ******//
 
 // let sum = 0;
 // for(let i=9; i>0; i--){
 //     console.log(i);
-//     sum = sum + i;
+//     sum += i;
 // }
 // console.log('sum: ',sum);
 
+
 //**********num & maths *//
+
 // const score = 100;
 // console.log(score + 1);
 
@@ -60,19 +66,19 @@
 // console.log(Math.floor(4.9));
 // console.log(Math.ceil(4.1));
 
-
-
 // const usd = 10000000;
 // console.log(usd.toLocaleString('en-BD'));
 
 
 //********** date & time *//
+
 // let newDate = new Date();
 // console.log(newDate);
 // console.log(" hello !!!");
 
 
 //********** if else **********//
+
 // let color = 'green';
 
 // if(color === 'red'){
@@ -83,6 +89,7 @@
 //         console.log('go');
 //     }
 
+
 //********** switch */
 
 // alert("welcome to trafic lighting system : ");
@@ -92,10 +99,10 @@
 
 // switch(color){
 
-//     case "red" : 
+//     case "red" :
 //     console.log("stop");
 //     break;
-//     case "yellow" : 
+//     case "yellow" :
 //     console.log("slow");
 //     break;
 //     case "green" :
@@ -103,8 +110,8 @@
 //     break;
 //     default:
 //         console.log("broken light");
-    
 // }
+
 
 //*********** ARRAY ********/
 
@@ -122,7 +129,8 @@
 // console.log(newArr);
 // console.log(typeof newArr);
 
-// // ****************** OBJECT *******************    
+
+// ****************** OBJECT *******************
 
 // const user = {
 //     name : "Naeem",
@@ -132,12 +140,10 @@
 //     email : "naeem@gmail.com",
 // }
 // console.log(user);
-// console.log("Name : ",user.name , "\nage : ",user.age, "\nadress : ",user.address, "\nphone : ",user.phone, "\nemail : ",user.email); 
-
+// console.log("Name : ",user.name , "\nage : ",user.age, "\nadress : ",user.address, "\nphone : ",user.phone, "\nemail : ",user.email);
 
 //better->
 // console.log(`Name : ${user.name} \nAge : ${user.age} \naddress : ${user.address} \nphone : ${user.phone} \nemail : ${user.email}`);
-
 
 // user.func = function(){
 //     console.log("Hello!!",this.name);
@@ -145,19 +151,20 @@
 
 // console.log(user.func());
 
-
 // const {phone} = user;  //destructuring
 // console.log("phone number is : ",phone);
 
 // const {email} = user;
 // console.log("email is : ",email);
 
-// // ******* function ***********
+
+// ******* function ***********
+
 // function saySomething(){
 //     console.log("Hello!!");
 // }
 
-// saySomething(); 
+// saySomething();
 
 // function add(a,b){
 //     console.log(a+b);
@@ -170,14 +177,22 @@
 // }
 // notification("Naeem");
 
-// function rest(...num1){ //using rest operator by ...
+
+//********** function & obj */
+
+// function rest(...num1){ //using rest operator by ...  and ei 3 dot/rest operator use korle variable gula array er vitor store hoy
 //     return num1;
 // }
 // console.log(rest(200, 400, 800, 1600, 2001));
-// function rest1(v1,v2,...num1){ //using rest operator by ...
-//     return num1;
+
+
+// function rest1(v1,v2,...num1){ //rest operator er age variable use korle (like v1, v2, etc), index positon onujai value load kore
+//     console.log(v1, v2);
+//     console.log(num1); //arrays
 // }
-// console.log(rest1(200, 400, 800, 1600, 2001));
+// rest1(200, 400, 800, 1600, 2001)
+
+
 // const user = {
 //     name : "Naeem",
 //     age: 23,
@@ -185,16 +200,51 @@
 // }
 // function handleObj(user){
 //     console.log(`my name is ${user.name} and i am ${user.age} years old and adress is ${user.address}`);
-    
+
 // }
-// handleObj(user);    
+// handleObj(user);
 
 // function add(a,b){
 //     console.log(a+b);
 // }
 // add(5,7);
 
-/***********arrow function */
+
+//***** Closures (functions inside functions) */
+
+// function abc() {
+//   const name = "ABC";
+//   let a = 55;
+//   console.log(`this is from ${name} and my value is ${a}`);
+
+//   function def() {
+//     const name = "DEF";
+//     let b = 66;
+//     console.log(`this is from ${name} and my value is ${a}`);
+
+//     function ghi() {
+//       const name = "GHI";
+//       console.log(`this is from ${name} and my value is ${b}`);
+//     }
+
+//     ghi(); // ✅ call ghi() here
+//   }
+
+//   def(); // ✅ call def() here
+// }
+
+// abc(); // ✅ call abc() to start everything
+
+
+//*********** IIFE (Immediately Invoked Function Expression)*/
+  (function(){
+    console.log("IIFE is running immediately!");
+    
+  })();
+
+  
+//***********arrow function */
+
 // const obj = {
 //     name : "Naeem",
 //     age : 23,
@@ -203,7 +253,6 @@
 //     }
 // }
 // obj.notification();
-
 
 // const users = [
 //     {user_id: 1, name : "Naeem", age : 23},
@@ -217,7 +266,6 @@
 
 // const [user1, user2, user3] = users;
 // console.log(user2.user_id, user3.name);
-
 
 // const func = function(){
 //     console.log("hello world,1");
@@ -250,12 +298,17 @@
 //     console.log("false");
 // }
 
-const map = new Map();
-map.set('name', 'Naeem');
-map.set('age', '22');
-map.set('country', 'BD');
+// const map = new Map();
+// map.set('name', 'Naeem');
+// map.set('age', '22');
+// map.set('country', 'BD');
 
-for(const [key, value] of map){
-    console.log(key,":-",value);
-}
+// for(const [key, value] of map){
+//     console.log(key,":-",value);
+// }
 
+// let h1 = document.querySelector(".header");
+// h1.addEventListener("click", function(){
+//     h1.style.backgroundColor = "green";
+//     h1.style.color = "white";
+// })
