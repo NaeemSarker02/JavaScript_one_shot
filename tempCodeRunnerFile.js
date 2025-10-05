@@ -1,4 +1,5 @@
-function add(a,b){
-    console.log(a+b);
+function saySomething(){
+    console.log("Hello!!");
 }
-add(6,3);
+
+saySomething();

@@ -6,8 +6,6 @@
 // newVal = Number(score);
 // console.log(typeof(newVal));
 
-
-
 // *********** stack & heap ***********/
 
 // stack - memory allocation for primitive data types(like number, string, boolean, null, undefined, symbol)
@@ -26,7 +24,6 @@
 // console.log(userOne.name);
 // console.log(userTwo.name);
 
-
 //********** string in js ************/
 
 // const name = 'Naeem';
@@ -37,7 +34,6 @@
 // console.log(name[4]);
 // console.log(name.indexOf(('a')));
 
-
 //******** normal prac ******//
 
 // let sum = 0;
@@ -46,7 +42,6 @@
 //     sum += i;
 // }
 // console.log('sum: ',sum);
-
 
 //**********num & maths *//
 
@@ -69,13 +64,11 @@
 // const usd = 10000000;
 // console.log(usd.toLocaleString('en-BD'));
 
-
 //********** date & time *//
 
 // let newDate = new Date();
 // console.log(newDate);
 // console.log(" hello !!!");
-
 
 //********** if else **********//
 
@@ -89,6 +82,23 @@
 //         console.log('go');
 //     }
 
+
+//  function check(age){
+//   if(age>18){
+//     console.log("allow");
+//   }else{
+//     console.log("not allow");
+//   }
+//  }
+// check(19);
+//******** modern */
+// let check = (age) =>{
+//   if(age>18) return "allow";
+//   return "not allow"
+// }
+
+let check = age => age > 18 ? "allow" : "not allow";
+console.log(check(17));
 
 //********** switch */
 
@@ -112,7 +122,6 @@
 //         console.log("broken light");
 // }
 
-
 //*********** ARRAY ********/
 
 // const arr = [1,2,3,4,5,6];
@@ -128,7 +137,6 @@
 // let newArr = arr.join();  //join() is conterting array into string
 // console.log(newArr);
 // console.log(typeof newArr);
-
 
 // ****************** OBJECT *******************
 
@@ -157,14 +165,14 @@
 // const {email} = user;
 // console.log("email is : ",email);
 
-
 // ******* function ***********
 
+//******** Function Declaration */ //hoisting allowed, hoisted (can be called before definition).
+
+// saySomething();//function invoked before initialization
 // function saySomething(){
 //     console.log("Hello!!");
 // }
-
-// saySomething();
 
 // function add(a,b){
 //     console.log(a+b);
@@ -177,14 +185,35 @@
 // }
 // notification("Naeem");
 
+//*********** Function Expression */ //hoisting not allowed.
 
-//********** function & obj */
+// const sub = function(a, b) {
+//   return a - b;
+// };
+// console.log(sub(7, 5));
 
+// let add = function(a,b){
+//   console.log(a+b);
+// }
+// add(5,4);
+
+//*********** default parameter */
+//   function multi(a,b=1){
+//     console.log(a*b);
+//   }
+// multi(2,2);
+
+// function notification(name = "guest"){
+//   console.log(`hello ${name}`);
+// }
+// notification();
+// notification("nafiz");
+
+//*********** Rest Parameters */
 // function rest(...num1){ //using rest operator by ...  and ei 3 dot/rest operator use korle variable gula array er vitor store hoy
 //     return num1;
 // }
 // console.log(rest(200, 400, 800, 1600, 2001));
-
 
 // function rest1(v1,v2,...num1){ //rest operator er age variable use korle (like v1, v2, etc), index positon onujai value load kore
 //     console.log(v1, v2);
@@ -192,6 +221,32 @@
 // }
 // rest1(200, 400, 800, 1600, 2001)
 
+// function getScore(...score){
+//   let total = 0;
+//   score.forEach(function (val){
+//     total += val;
+//   });
+//   console.log(total);
+// }
+// getScore(1,2,3,4,5)
+
+// const getScore = (...score) => {
+//   let total = 0;
+//   for (let val of score) {
+//     total += val;
+//   }
+//   console.log(total);
+// };
+// getScore(1, 2, 3, 4, 5);
+
+let add = (...rest)=>{
+  let sum = 0;
+  return 
+}
+
+add(1,12);
+
+//********** function & object */
 
 // const user = {
 //     name : "Naeem",
@@ -208,7 +263,6 @@
 //     console.log(a+b);
 // }
 // add(5,7);
-
 
 //***** Closures (functions inside functions) */
 
@@ -235,14 +289,12 @@
 
 // abc(); // ✅ call abc() to start everything
 
-
 //*********** IIFE (Immediately Invoked Function Expression)*/
-  (function(){
-    console.log("IIFE is running immediately!");
-    
-  })();
+// (function(){
+//   console.log("IIFE is running immediately!");
 
-  
+// })();
+
 //***********arrow function */
 
 // const obj = {
