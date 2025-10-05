@@ -239,12 +239,12 @@ console.log(check(17));
 // };
 // getScore(1, 2, 3, 4, 5);
 
-let add = (...rest)=>{
-  let sum = 0;
-  return 
-}
+// let add = (...rest)=>{
+//   let sum = 0;
+//   return 
+// }
 
-add(1,12);
+// add(1,12);
 
 //********** function & object */
 
