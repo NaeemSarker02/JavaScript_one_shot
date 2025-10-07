@@ -97,8 +97,8 @@
 //   return "not allow"
 // }
 
-let check = age => age > 18 ? "allow" : "not allow";
-console.log(check(17));
+// let check = age => age > 18 ? "allow" : "not allow";
+// console.log(check(17));
 
 //********** switch */
 
@@ -364,3 +364,14 @@ console.log(check(17));
 //     h1.style.backgroundColor = "green";
 //     h1.style.color = "white";
 // })
+
+
+const func = ()=>{
+    console.log("this is a arrow function!!");
+    
+}
+
+func();
+
+let checking = (age)=> age>17 ? "allow" : "not allow";
+console.log(checking(18));
