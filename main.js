@@ -91,6 +91,10 @@
 //   }
 //  }
 // check(19);
+
+
+
+
 //******** modern */
 // let check = (age) =>{
 //   if(age>18) return "allow";
