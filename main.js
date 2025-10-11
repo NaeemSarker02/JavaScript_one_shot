@@ -379,3 +379,5 @@
 
 // let checking = (age)=> age>17 ? "allow" : "not allow";
 // console.log(checking(18));
+
+
