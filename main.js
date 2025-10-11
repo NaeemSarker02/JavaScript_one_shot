@@ -370,12 +370,12 @@
 // })
 
 
-const func = ()=>{
-    console.log("this is a arrow function!!");
+// const func = ()=>{
+//     console.log("this is a arrow function!!");
     
-}
+// }
 
-func();
+// func();
 
-let checking = (age)=> age>17 ? "allow" : "not allow";
-console.log(checking(18));
+// let checking = (age)=> age>17 ? "allow" : "not allow";
+// console.log(checking(18));
