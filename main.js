@@ -82,7 +82,6 @@
 //         console.log('go');
 //     }
 
-
 //  function check(age){
 //   if(age>18){
 //     console.log("allow");
@@ -91,9 +90,6 @@
 //   }
 //  }
 // check(19);
-
-
-
 
 //******** modern */
 // let check = (age) =>{
@@ -245,7 +241,7 @@
 
 // let add = (...rest)=>{
 //   let sum = 0;
-//   return 
+//   return
 // }
 
 // add(1,12);
@@ -279,7 +275,7 @@
 // if(true){
 //     const a  = 50;
 //     console.log("inner : ", a );
-    
+
 // }
 // console.log(`outer : ${a}`);
 
@@ -308,13 +304,12 @@
 
 // abc(); // ✅ call abc() to start everything
 
-
 // function one(){
 //     const firstname = "Naeem";
 
 //     function two(){
 //         lastname = "Sarker";
-//         console.log(firstname);       
+//         console.log(firstname);
 //     }
 //     two();
 // }
@@ -337,13 +332,24 @@
 //***********this & arrow function */
 
 const obj = {
-    name : "Naeem",
-    age : 23,
-    notification : function() {     //here noti is a method, cz its inside a obj
-        console.log(`this is ${this.name} & age is ${this.age}`);//used this key, cz of property on the same obj, thats why we call those property using this key
-    }
-}
-obj.notification(); 
+  name: "Naeem",
+  age: 23,
+  notification() {
+    //here noti is a method, cz its inside a obj
+    console.log(`this is ${this.name} & age is ${this.age}`); //used this key, cz of property on the same obj, thats why we call those property using this key
+  },
+};
+obj.notification();
+
+const user = {
+  name: "Naeem",
+  id: 432,
+  login() {
+    console.log(`${this.name} logged in successfully & your user id ${this.id}`);
+  },
+};
+
+user.login();
 
 // const users = [
 //     {user_id: 1, name : "Naeem", age : 23},
@@ -404,15 +410,12 @@ obj.notification();
 //     h1.style.color = "white";
 // })
 
-
 // const func = ()=>{
 //     console.log("this is a arrow function!!");
-    
+
 // }
 
 // func();
 
 // let checking = (age)=> age>17 ? "allow" : "not allow";
 // console.log(checking(18));
-
-
