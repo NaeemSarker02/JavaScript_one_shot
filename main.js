@@ -252,16 +252,21 @@
 
 //********** function & object */
 
-// const user = {
-//     name : "Naeem",
-//     age: 23,
-//     address : "Dhaka",
-// }
-// function handleObj(user){
-//     console.log(`my name is ${user.name} and i am ${user.age} years old and adress is ${user.address}`);
+const user = {
+    name : "Naeem",
+    age: 23,
+    address : "Dhaka",
+}
+const user1 = {
+    name : "nafiz",
+    age: 14,
+    address : "Uttara",
+}
+function objfunc(a){
+    console.log(`my name is ${a.name} and i am ${a.age} years old and adress is ${a.address}`);
 
-// }
-// handleObj(user);
+}
+objfunc(user1);
 
 // function add(a,b){
 //     console.log(a+b);
