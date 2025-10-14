@@ -252,26 +252,36 @@
 
 //********** function & object */
 
-const user = {
-    name : "Naeem",
-    age: 23,
-    address : "Dhaka",
-}
-const user1 = {
-    name : "nafiz",
-    age: 14,
-    address : "Uttara",
-}
-function objfunc(a){
-    console.log(`my name is ${a.name} and i am ${a.age} years old and adress is ${a.address}`);
+// const user = {
+//     name : "Naeem",
+//     age: 23,
+//     address : "Dhaka",
+// }
+// const user1 = {
+//     name : "nafiz",
+//     age: 14,
+//     address : "Uttara",
+// }
+// function objfunc(a){
+//     console.log(`my name is ${a.name} and i am ${a.age} years old and adress is ${a.address}`);
 
-}
-objfunc(user1);
+// }
+// objfunc(user1);
 
 // function add(a,b){
 //     console.log(a+b);
 // }
 // add(5,7);
+
+//************** Scope */
+// const a = 100;
+
+// if(true){
+//     const a  = 50;
+//     console.log("inner : ", a );
+    
+// }
+// console.log(`outer : ${a}`);
 
 //***** Closures (functions inside functions) */
 
@@ -298,22 +308,42 @@ objfunc(user1);
 
 // abc(); // ✅ call abc() to start everything
 
+
+// function one(){
+//     const firstname = "Naeem";
+
+//     function two(){
+//         lastname = "Sarker";
+//         console.log(firstname);       
+//     }
+//     two();
+// }
+// one();
+
+// if(true){
+//     const fastname = "naeem";
+//     if(fastname === "naeem"){
+//         const lastname = " sarker";
+//         console.log(fastname + lastname);
+//     }
+// }
+
 //*********** IIFE (Immediately Invoked Function Expression)*/
 // (function(){
 //   console.log("IIFE is running immediately!");
 
 // })();
 
-//***********arrow function */
+//***********this & arrow function */
 
-// const obj = {
-//     name : "Naeem",
-//     age : 23,
-//     notification : function() {
-//         console.log(`my name is ${this.name}`);
-//     }
-// }
-// obj.notification();
+const obj = {
+    name : "Naeem",
+    age : 23,
+    notification : function() {     //here noti is a method, cz its inside a obj
+        console.log(`this is ${this.name} & age is ${this.age}`);//used this key, cz of property on the same obj, thats why we call those property using this key
+    }
+}
+obj.notification(); 
 
 // const users = [
 //     {user_id: 1, name : "Naeem", age : 23},
