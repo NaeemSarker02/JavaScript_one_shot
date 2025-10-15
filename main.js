@@ -361,6 +361,15 @@
 // func();
 // func1();
 
+//  const test = () => console.log("arrar called");
+//  test();
+
+//  const add = (a,b)=> `a+b = ${a+b}`;
+//  console.log(add(9,10));
+
+// let checking = (age)=> age>17 ? "allow" : "not allow";
+// console.log(checking(18));
+
 //******** Array of objects */
 // const users = [
 //     {id: 1, name : "Naeem", age : 23},
@@ -372,7 +381,7 @@
 //     {id: 5, name : "borkot", age : 25},
 //     {id: 6, name : "jabbar", age : 27},
 // ]
-
+//****** for of */
 // for(let user of users){// users er obj value gula k ami user er maddhome tanbo
 //     console.log(user.id,user.name,user.age);
 // }
@@ -391,23 +400,49 @@
 // }
 
 //********** map */
-// const userMap = new Map([
-//     ["name :", "Naeem"], //stores key–value pairs
-//     ["id :", 432],
-// ]);
+// const maping = new Map();
+// maping.set('Bangladesh', "BD");
+// maping.set('America', "USA");
+// maping.set('Pakistan', "PK");
+
+// for(let [k,v] of maping){
+//     console.log(k,v);
+// }
+
+// const userMap = new Map();
+// userMap.set('name :', "Naeem");
+// userMap.set('id :', 432);
 
 // for(let [key, value] of userMap){//destructuring the pair(each array) into 2 variables
 //     console.log(key,value);
 // }
 
-// const setting = new Map([
-//     ["theme :", "dark"],
-//     ["language :", "eng"],
-// ]);
+// const setting = new Map();
+// setting.set('theme', "dark");
+// setting.set('language', "en");
 
 // for(let [k, v] of setting){
 //     console.log(`the ${k} is ${v}`);
 // }
+//***** for Each */
+// const numbers = [10, 20, 30, 40];
+
+// numbers.forEach(function (num) {
+//   console.log(num);
+// });
+
+// numbers.forEach((num, index) => {
+//   console.log(` ${index} = ${num}`);
+// });
+
+
+// const arr = ["naeem", "nafiz", "fatema"];
+
+// arr.forEach((v) => {
+//   console.log(v);
+// });
+
+// arr.forEach((v)=>console.log(v)); //short
 
 // const users = {
 //     name: "naeem",
@@ -452,6 +487,3 @@
 // }
 
 // func();
-
-// let checking = (age)=> age>17 ? "allow" : "not allow";
-// console.log(checking(18));
