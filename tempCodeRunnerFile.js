@@ -1,2 +1,8 @@
- // const [user1, user2, user3] = users;
-    // console.log(user2.user_id, user3.name);
+const prices = [100, 200, 300];
+// let total = 0;
+
+// prices.forEach((price) => {
+//   total += price;
+// });
+
+// console.log("Total =", total);

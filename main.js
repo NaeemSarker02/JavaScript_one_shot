@@ -435,7 +435,6 @@
 //   console.log(` ${index} = ${num}`);
 // });
 
-
 // const arr = ["naeem", "nafiz", "fatema"];
 
 // arr.forEach((v) => {
@@ -443,6 +442,36 @@
 // });
 
 // arr.forEach((v)=>console.log(v)); //short
+
+// const prices = [100, 200, 300];
+// let total = 0;
+
+// prices.forEach((price) => {
+//   total += price;
+// });
+
+// console.log("Total =", total);
+
+//**** filter */ 
+// Returns a new array (original array unchanged).
+const numbers = [10, 25, 30, 45, 60];
+
+const result = numbers.filter((num) => num > 20);
+
+console.log(result);
+
+const users = [
+  { name: "Naeem", age: 22 },
+  { name: "Sakib", age: 17 },
+  { name: "Rafi", age: 25 },
+];
+
+// Filter only adults
+const adults = users.filter(user => user.age >= 18);
+
+console.log(adults);
+
+
 
 // const users = {
 //     name: "naeem",
