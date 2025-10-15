@@ -331,47 +331,83 @@
 
 //***********this & arrow function */
 
-const obj = {
-  name: "Naeem",
-  age: 23,
-  notification() {
-    //here noti is a method, cz its inside a obj
-    console.log(`this is ${this.name} & age is ${this.age}`); //used this key, cz of property on the same obj, thats why we call those property using this key
-  },
-};
-obj.notification();
+// const obj = {
+//   name: "Naeem",
+//   age: 23,
+//   notification() { //here noti is a method, cz its inside a obj
+//   console.log(`this is ${this.name} & age is ${this.age}`); //used this key, cz of   property on the same obj, thats why we call those property using this key & this key should be use only object
+//   },
+// };
+// obj.notification();
 
-const user = {
-  name: "Naeem",
-  id: 432,
-  login() {
-    console.log(`${this.name} logged in successfully & your user id ${this.id}`);
-  },
-};
+// const user = {
+//   name: "Naeem",
+//   id: 432,
+//   login() {
+//     console.log(`${this.name} logged in successfully & your user id ${this.id}`);
+//   },
+// };
+// user.login();
 
-user.login();
+//*********** arrow */
 
-// const users = [
-//     {user_id: 1, name : "Naeem", age : 23},
-//     {user_id: 2, name : "Rahim", age : 25},
-//     {user_id: 3, name : "Karim", age : 27}
-// ]
-
-// for(let user of users){
-//     console.log(user.name,user.age);
+// const func = function(){  //func expression
+//     console.log("hello, from expression");
 // }
 
-// const [user1, user2, user3] = users;
-// console.log(user2.user_id, user3.name);
-
-// const func = function(){
-//     console.log("hello world,1");
-// }
-// const func1 = () =>{
-//     console.log("hello world,2");
+// const func1 = ()=>{
+//     console.log("hello , from arrow");
 // }
 // func();
 // func1();
+
+//******** Array of objects */
+// const users = [
+//     {id: 1, name : "Naeem", age : 23},
+//     {id: 2, name : "Rahim", age : 25},
+//     {id: 3, name : "Karim", age : 27},
+// ]
+// const admins = [
+//     {id: 4, name : "rofiq", age : 23},
+//     {id: 5, name : "borkot", age : 25},
+//     {id: 6, name : "jabbar", age : 27},
+// ]
+
+// for(let user of users){// users er obj value gula k ami user er maddhome tanbo
+//     console.log(user.id,user.name,user.age);
+// }
+
+// for(let i of admins){
+//     console.log(i.id, i.name, i.age);
+
+// }
+
+//******** Array Destructuring */
+// const [user1, user2, user3] = users; (Extracts values from the array into separate variables by index wise)
+// console.log("last line : ",user2.id, user3.name);
+
+// for(let char of "Naeem"){
+//     console.log(char);
+// }
+
+//********** map */
+// const userMap = new Map([
+//     ["name :", "Naeem"], //stores key–value pairs
+//     ["id :", 432],
+// ]);
+
+// for(let [key, value] of userMap){//destructuring the pair(each array) into 2 variables
+//     console.log(key,value);
+// }
+
+// const setting = new Map([
+//     ["theme :", "dark"],
+//     ["language :", "eng"],
+// ]);
+
+// for(let [k, v] of setting){
+//     console.log(`the ${k} is ${v}`);
+// }
 
 // const users = {
 //     name: "naeem",
