@@ -481,8 +481,11 @@ const numbers = [10, 25, 33, 40, 55, 62];
 // });
 // console.log(odds);
 
-// const odds = numbers.filter(num => num % 2 !== 0); //short
-// console.log(odds);
+const odds = numbers.filter(num => num % 2 !== 0); //short
+console.log(odds);
+
+console.log("Each odd number:");
+odds.forEach(num => console.log(num));
 
 
 // const users = {
