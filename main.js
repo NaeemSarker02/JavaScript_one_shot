@@ -454,23 +454,35 @@
 
 //**** filter */ 
 // Returns a new array (original array unchanged).
-const numbers = [10, 25, 30, 45, 60];
+// const numbers = [10, 25, 30, 45, 60];
 
-const result = numbers.filter((num) => num > 20);
+// const result = numbers.filter((num) => num > 20);
 
-console.log(result);
+// console.log(result);
 
-const users = [
-  { name: "Naeem", age: 22 },
-  { name: "Sakib", age: 17 },
-  { name: "Rafi", age: 25 },
-];
+// const users = [
+//   { name: "Naeem", age: 22 },
+//   { name: "Sakib", age: 17 },
+//   { name: "Rafi", age: 25 },
+// ];
 
-// Filter only adults
-const adults = users.filter(user => user.age >= 18);
+ // Filter only adults
+// const adults = users.filter(user => user.age >= 18);
 
-console.log(adults);
+// console.log(adults);
 
+
+
+//***  practice */
+const numbers = [10, 25, 33, 40, 55, 62];
+
+// const odds = numbers.filter((odd)=>{
+//     return odd % 2 !== 0;
+// });
+// console.log(odds);
+
+// const odds = numbers.filter(num => num % 2 !== 0); //short
+// console.log(odds);
 
 
 // const users = {
