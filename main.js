@@ -497,6 +497,9 @@
 // console.log(doubled);
 
 //***  practice */
+
+
+//-----1----
 // const numbers = [10, 25, 33, 40, 55, 62];
 
 // const odds = numbers.filter((odd)=>{
@@ -511,21 +514,106 @@
 // odds.forEach(num => console.log(num));
 
 
-const users = [
-  { id: 1, name: "Naeem", age: 22, country: "Bangladesh" },
-  { id: 2, name: "Rahim", age: 17, country: "Bangladesh" },
-  { id: 3, name: "Karim", age: 25, country: "USA" },
-  { id: 4, name: "Sakib", age: 15, country: "Pakistan" },
-  { id: 5, name: "Rafi", age: 30, country: "Bangladesh" }
+
+//--------2------
+// const users = [
+//   { id: 1, name: "Naeem", age: 22, country: "Bangladesh" },
+//   { id: 2, name: "Rahim", age: 17, country: "Bangladesh" },
+//   { id: 3, name: "Karim", age: 25, country: "USA" },
+//   { id: 4, name: "Sakib", age: 15, country: "Pakistan" },
+//   { id: 5, name: "Rafi", age: 30, country: "Bangladesh" }
+// ];
+
+// const newUsers = users.filter((u)=>u.age >= 18);
+
+
+// const names = newUsers.map((n)=>n.name.toUpperCase());
+
+
+// names.forEach((f)=>console.log(f));
+
+
+
+
+//----3------
+
+// const products = [
+//   { id: 1, name: "iPhone 12", price: 80000, inStock: true },
+//   { id: 2, name: "Samsung S21", price: 75000, inStock: false },
+//   { id: 3, name: "Redmi Note 10", price: 25000, inStock: true },
+//   { id: 4, name: "Realme 9", price: 28000, inStock: true },
+// ];
+
+// const availavel = products.filter((p)=>p.inStock === true && p.price <= 50000);
+
+// const names = availavel.map((n)=>n.name.toUpperCase());
+
+// names.forEach((n)=> console.log(n));
+
+
+
+
+//----4----
+
+// const users = [
+//   { name: "Naeem", role: "Admin" },
+//   { name: "Rahim", role: "User" },
+//   { name: "Karim", role: "Admin" },
+//   { name: "Rafi", role: "Vendor" },
+// ];
+
+// const user = users.filter((u)=>u.role === "Admin");
+// const names = user.map((n)=> n.name);
+// console.log(names);
+
+// names.forEach((n)=>console.log(`Admin : ${n}`));
+
+// console.log("total admins :",names.length);
+
+
+
+//------ 5 -----
+// const apiResponse = [
+//   { user_id: 1, full_name: "Naeem Sarker", active: true },
+//   { user_id: 2, full_name: "Rafi Islam", active: false },
+//   { user_id: 3, full_name: "Rahim Uddin", active: true }
+// ];
+
+// const simplified = apiResponse.map(user => ({
+//    id : user.user_id,
+//    name : user.full_name,
+//    active : user.active,
+// }));
+
+// console.log(simplified);
+
+// const filter = simplified.filter((f)=>f.active == true);
+
+// const final = filter.map((f)=>f.name)
+// console.log(final);
+
+// final.forEach((f)=>console.log(`Active User : ${f}`));
+
+
+
+//---5---------
+
+const students = [
+  { name: "Naeem", marks: 85 },
+  { name: "Rafi", marks: 72 },
+  { name: "Karim", marks: 95 },
+  { name: "Rahim", marks: 45 },
 ];
 
-const newUsers = users.filter((u)=>u.age >= 18);
+const student = students.filter((s)=>s.marks>= 80);
+console.log(student);
 
+const final = student.map((f)=>({
+  name : f.name,
+  grade : f.marks
+}));
 
-const names = newUsers.map((n)=>n.name.toUpperCase());
-
-
-names.forEach((f)=>console.log(f));
+final.forEach((f)=>console.log(f));
 
 
 
