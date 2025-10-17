@@ -424,6 +424,8 @@
 // for(let [k, v] of setting){
 //     console.log(`the ${k} is ${v}`);
 // }
+
+
 //***** for Each */
 // const numbers = [10, 20, 30, 40];
 
@@ -472,20 +474,60 @@
 // console.log(adults);
 
 
+// const books = [
+//     {title: 'book 1', genre: 'technology', publish: 2010, edition: '1st'},
+//     {title: 'book 2', genre: 'scientific', publish: 2000, edition: '2nd'},
+//     {title: 'book 3', genre: 'historic', publish: 2003, edition: '3th'},
+//     {title: 'book 4', genre: 'islamic', publish: 2006, edition: '4th'},
+// ];
+
+// let searched = books.filter((bk)=> bk.genre === 'historic');
+
+// searched = books.filter((bk)=>{ return bk.publish >= 2003})
+
+// console.log(searched);
+
+
+//***  map */
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const doubled = numbers.map(num => num * 2);
+
+// console.log(doubled);
 
 //***  practice */
-const numbers = [10, 25, 33, 40, 55, 62];
+// const numbers = [10, 25, 33, 40, 55, 62];
 
 // const odds = numbers.filter((odd)=>{
 //     return odd % 2 !== 0;
 // });
 // console.log(odds);
 
-const odds = numbers.filter(num => num % 2 !== 0); //short
-console.log(odds);
+// const odds = numbers.filter(num => num % 2 !== 0); //short
+// console.log(odds);
 
-console.log("Each odd number:");
-odds.forEach(num => console.log(num));
+// console.log("Each odd number:");
+// odds.forEach(num => console.log(num));
+
+
+const users = [
+  { id: 1, name: "Naeem", age: 22, country: "Bangladesh" },
+  { id: 2, name: "Rahim", age: 17, country: "Bangladesh" },
+  { id: 3, name: "Karim", age: 25, country: "USA" },
+  { id: 4, name: "Sakib", age: 15, country: "Pakistan" },
+  { id: 5, name: "Rafi", age: 30, country: "Bangladesh" }
+];
+
+const newUsers = users.filter((u)=>u.age >= 18);
+
+
+const names = newUsers.map((n)=>n.name.toUpperCase());
+
+
+names.forEach((f)=>console.log(f));
+
+
 
 
 // const users = {
