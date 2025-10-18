@@ -130,7 +130,75 @@
 // arr.push(7);
 // arr.pop();
 // arr.push(8)
-// console.log(arr[6]);
+// console.log(arr);
+
+// arr.shift();//removing at the beginning
+// console.log(arr);
+
+// arr.unshift(10);//adding at the beginning
+// console.log(arr);
+
+//** slice */   ,  slice(start, end)
+// let arr1 = [1,2,3,4,5,6];
+// let arr2 = arr1.slice(2,4);// extracted new arr form old arr based on (start, end)
+// console.log(arr2);
+
+
+
+//** splice */
+// let arr1 = [1,2,3,4,5,6];
+// arr1.splice(2,2,);//(index no, no of elements)
+// arr1.splice(2,2 , 7,8,9);//(index no,no of elements , adding new elements)
+// console.log(arr1);
+
+// let  num = [5,2,77,1,9,0,3,2];
+// console.log(num);
+
+
+//**** sort */
+
+// const num = [3,2,4,6,7,1,3,2.1,2.3,1.2, "Naeem", "Nafiz", "Fatema"];
+// console.log(num.sort());
+
+// const num = [3,2,4,6,7,1,3,2.1,2.3,1.2, "Naeem", "Nafiz", "Fatema"];
+// console.log(num.sort().reverse());
+
+// let sorted1 = [...num].sort((a,b)=>a-b); //Ascending Order
+// console.log("Ascending Order : ",sorted1);
+
+// let sorted = [...num].sort((a,b)=>b-a); //Descending Order
+// console.log("Descending Order : ",sorted);
+
+// console.log(num);
+
+//******  [...] — Spread Operator */ Create a new array with the same elements || coping
+// let nu = [5, 2, 77, 1, 9];
+// let copy = [...nu];
+
+// console.log(copy); 
+
+// let num = [1, 2, 3];
+// let copy = num;  //without spread,,eikhane copy kora hoy nai, just new ekta variable a store kora hoise
+
+// copy.push(4);
+// console.log(num); // [1, 2, 3, 4]  <-- also changed!
+
+// let num = [1, 2, 3];
+// let copy = [...num];  //with spread, copy kore new ekta variable e rakha hoise
+
+// copy.push(4);
+// console.log(num);  
+// console.log(copy); 
+
+//** reduce */ calculate sum
+// let arr = [1,2,3,4,5];
+
+// let sub = arr.reduce((accumulator, currentval) => accumulator + currentval,0)
+// console.log(sub);
+
+// let sub = arr.reduce((accumulator, currentval) => accumulator + currentval,5)
+// console.log(sub);
+
 
 // console.log(arr);
 
@@ -164,6 +232,51 @@
 
 // const {email} = user;
 // console.log("email is : ",email);
+
+
+
+// const user = {
+//     name : "Naeem",
+//     age : 23,
+//     address : {
+//       postcode: 1230,
+//       thana : "uttarkhan",
+//       location: {
+//         village : "Chanpara",
+//         houseNo : 432,
+//       },
+//     },
+//     phone : 1629753788,
+//     email : "naeem@gmail.com",
+// }
+
+
+// console.log(user.name);
+
+// console.log(user.address);
+
+// console.log(user.address.thana);
+
+// console.log(user.address.location);
+
+// console.log(user.email);
+
+// console.log(user.village, user.houseNo);//cant be access
+
+// let {village, houseNo} = user.address.location; //**Object Destructuring *// (eta kore nile easily obj direct access kora jay)
+
+// console.log(village, houseNo);
+
+
+
+//** for in */
+const user = { name: "Naeem", age: 23, city: "Dhaka" };
+
+for (let key in user) {
+  console.log(key, ":", user[key]);
+}
+
+
 
 // ******* function ***********
 
@@ -381,6 +494,8 @@
 //     {id: 5, name : "borkot", age : 25},
 //     {id: 6, name : "jabbar", age : 27},
 // ]
+
+
 //****** for of */
 // for(let user of users){// users er obj value gula k ami user er maddhome tanbo
 //     console.log(user.id,user.name,user.age);
@@ -391,8 +506,13 @@
 
 // }
 
-//******** Array Destructuring */
-// const [user1, user2, user3] = users; (Extracts values from the array into separate variables by index wise)
+//******** Array Destructuring *///(Extracts values from the array into separate variables by index wise) (eta kore nile easily obj direct access kora jay)
+// const users = [
+//     {id: 1, name : "Naeem", age : 23},
+//     {id: 2, name : "Rahim", age : 25},
+//     {id: 3, name : "Karim", age : 27},
+// ]
+// const [user1, user2, user3] = users; 
 // console.log("last line : ",user2.id, user3.name);
 
 // for(let char of "Naeem"){
@@ -423,6 +543,16 @@
 
 // for(let [k, v] of setting){
 //     console.log(`the ${k} is ${v}`);
+// }
+
+
+// const map = new Map();
+// map.set('name', 'Naeem');
+// map.set('age', '22');
+// map.set('country', 'BD');
+
+// for(const [key, value] of map){
+//     console.log(key,":-",value);
 // }
 
 
@@ -598,22 +728,22 @@
 
 //---5---------
 
-const students = [
-  { name: "Naeem", marks: 85 },
-  { name: "Rafi", marks: 72 },
-  { name: "Karim", marks: 95 },
-  { name: "Rahim", marks: 45 },
-];
+// const students = [
+//   { name: "Naeem", marks: 85 },
+//   { name: "Rafi", marks: 72 },
+//   { name: "Karim", marks: 95 },
+//   { name: "Rahim", marks: 45 },
+// ];
 
-const student = students.filter((s)=>s.marks>= 80);
-console.log(student);
+// const student = students.filter((s)=>s.marks>= 80);
+// console.log(student);
 
-const final = student.map((f)=>({
-  name : f.name,
-  grade : f.marks
-}));
+// const final = student.map((f)=>({
+//   name : f.name,
+//   grade : f.marks
+// }));
 
-final.forEach((f)=>console.log(f));
+// final.forEach((f)=>console.log(f));
 
 
 
@@ -640,14 +770,8 @@ final.forEach((f)=>console.log(f));
 //     console.log("false");
 // }
 
-// const map = new Map();
-// map.set('name', 'Naeem');
-// map.set('age', '22');
-// map.set('country', 'BD');
 
-// for(const [key, value] of map){
-//     console.log(key,":-",value);
-// }
+
 
 // let h1 = document.querySelector(".header");
 // h1.addEventListener("click", function(){
