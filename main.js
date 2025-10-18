@@ -269,7 +269,7 @@
 
 
 
-//** for in */
+//** for in */ Iterating over key or object properties  and  its use for objects, not arrays.
 const user = { name: "Naeem", age: 23, city: "Dhaka" };
 
 for (let key in user) {
@@ -496,7 +496,7 @@ for (let key in user) {
 // ]
 
 
-//****** for of */
+//****** for of */ Loops over values || Perfect for arrays, strings, maps, sets
 // for(let user of users){// users er obj value gula k ami user er maddhome tanbo
 //     console.log(user.id,user.name,user.age);
 // }
@@ -785,3 +785,16 @@ for (let key in user) {
 // }
 
 // func();
+
+
+
+
+
+
+
+                  //***************** part 2 */
+
+
+                  //***  DOM */
+
+                 
