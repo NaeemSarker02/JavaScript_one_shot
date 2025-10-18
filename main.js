@@ -833,3 +833,11 @@ d.addEventListener("click", function () {
 
 
 //*Attribute manipulation means reading, changing, adding, or removing HTML attributes (like src, href, id, class, etc.) from DOM elements using JavaScript.
+
+
+
+
+  const img = document.getElementById("photo");
+  console.log(img.getAttribute("src")); // 👉 "avatar.png"
+  console.log(img.getAttribute("alt")); // 👉 "profile photo"
+
