@@ -797,7 +797,39 @@ for (let key in user) {
 
                   //***  DOM */
 
-let h1 = document.querySelector("h1");
+let a = document.querySelector("h1");
 
-h1.style.backgroundColor = "green";
-h1.style.color = "white";
+a.addEventListener("mouseover", function () {
+  if (a.innerHTML === "hey there") {
+    a.innerHTML = "how are you?";
+    a.style.backgroundColor = "yellow";
+    a.style.color = "black";
+  } else {
+    a.innerHTML = "hey there";
+    a.style.backgroundColor = "green";
+    a.style.color = "white";
+  }
+});
+
+let d = document.querySelector(".div1");
+d.addEventListener("click", function () {
+  d.style.backgroundColor = "purple";
+  d.style.padding = "20px";
+  d.style.border = "2px solid darkblue";
+  d.style.borderRadius = "10px";
+  d.style.transition = "background-color 0.5s ease";
+  d.style.cursor = "pointer";
+  d.style.color = "white";
+  d.innerHTML = "You clicked the div!";
+});
+
+
+
+
+
+
+
+
+
+
+//*Attribute manipulation means reading, changing, adding, or removing HTML attributes (like src, href, id, class, etc.) from DOM elements using JavaScript.
