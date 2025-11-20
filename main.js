@@ -874,7 +874,6 @@ b.addEventListener("click", function () {
 });
 
 
-
 let para = document.querySelectorAll("p");
 para.forEach(function (para) {
   para.style.borderColor = "lightblue";
@@ -902,5 +901,7 @@ changers.forEach(function (c) {
 
 
           //**   create elements */
+          
 let h1 = document.createElement('p')
 
+console.log(p);
