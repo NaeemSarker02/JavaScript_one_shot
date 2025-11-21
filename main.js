@@ -900,10 +900,16 @@ changers.forEach(function (c) {
 });
 
 
-          //**   create elements */
+          //**   create elements with dom */
           
 let ul = document.querySelector("ul");
 let li = document.createElement("li");
 li.textContent = "updated five"
 ul.appendChild(li);
+
+let img = document.createElement("img");
+img.setAttribute("src", 
+  "https://c4.wallpaperflare.com/wallpaper/1004/376/842/cute-little-baby-girl-wallpaper-preview.jpg");
+let div = document.querySelector(".createElements");
+div.prepend(img);
 
