@@ -902,6 +902,8 @@ changers.forEach(function (c) {
 
           //**   create elements */
           
-let h1 = document.createElement('p')
+let ul = document.querySelector("ul");
+let li = document.createElement("li");
+li.textContent = "updated five"
+ul.appendChild(li);
 
-console.log(p);
