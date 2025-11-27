@@ -913,3 +913,5 @@ img.setAttribute("src",
 let div = document.querySelector(".createElements");
 div.prepend(img);
 
+let p = document.querySelectorAll("p");
+p.for
