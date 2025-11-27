@@ -913,5 +913,9 @@ img.setAttribute("src",
 let div = document.querySelector(".createElements");
 div.prepend(img);
 
-let p = document.querySelectorAll("p");
-p.for
+//************ Events ******//
+let ev = document.querySelector("li");
+
+ev.addEventListener("click", function(){
+  ev.style.color = "red";
+})
