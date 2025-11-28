@@ -914,8 +914,10 @@ let div = document.querySelector(".createElements");
 div.prepend(img);
 
 //************ Events ******//
-let ev = document.querySelector("li");
+const allLi = document.querySelectorAll("li");
 
-ev.addEventListener("click", function(){
-  ev.style.color = "red";
-})
+    allLi.forEach(li => {
+        li.addEventListener("click", () => {
+            li.style.color = "red";
+        });
+    });
